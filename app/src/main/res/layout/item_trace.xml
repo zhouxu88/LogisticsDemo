@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff">
+
+    <ImageView
+        android:id="@+id/dot_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/dot_red" />
+
+
+    <!--快件接收站点-->
+    <TextView
+        android:id="@+id/accept_station_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/dot_iv"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@id/dot_iv"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        tools:text="快件已从杭州中转部发出" />
+    <!--快件接收时间-->
+    <TextView
+        android:id="@+id/accept_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/accept_station_tv"
+        android:layout_below="@id/accept_station_tv"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#999999"
+        android:textSize="12sp"
+        tools:text="2017-05-15 10:59:04" />
+
+    <!--分割线-->
+    <View
+        android:id="@+id/divider_line_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignStart="@id/accept_time_tv"
+        android:layout_below="@id/accept_time_tv"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:background="#eeeeee" />
+
+    <View
+        android:id="@+id/empty_view"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_below="@id/divider_line_view"
+        android:layout_marginStart="15dp" />
+
+
+    <!--时间轴的竖线-->
+    <View
+        android:id="@+id/time_line_view"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_above="@id/empty_view"
+        android:layout_alignStart="@id/dot_iv"
+        android:layout_below="@id/dot_iv"
+        android:layout_marginStart="7dp"
+        android:background="#eeeeee" />
+
+
+</RelativeLayout>

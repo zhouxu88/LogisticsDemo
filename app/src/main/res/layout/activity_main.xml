@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fbfbfb"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#000000">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--返回键-->
+                <ImageView
+                    android:id="@+id/back_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/fanhui_baise"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="物流信息"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="105dp"
+            android:background="#ffffff"
+            android:paddingEnd="15dp">
+
+            <!--商品主图-->
+            <ImageView
+                android:id="@+id/main_pic_iv"
+                android:scaleType="centerCrop"
+                android:contentDescription="@null"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@mipmap/main_pic"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp" />
+
+            <!--物流状态-->
+            <TextView
+                android:id="@+id/express_status_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/main_pic_iv"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/main_pic_iv"
+                android:textColor="#333333"
+                android:textSize="15sp"
+                android:text="物流状态:已签收" />
+            <!--快递公司-->
+            <TextView
+                android:id="@+id/express_company_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/express_status_tv"
+                android:layout_below="@id/express_status_tv"
+                android:layout_marginTop="10dp"
+                android:textColor="#666666"
+                android:textSize="15sp"
+                android:text="快递公司:圆通快递" />
+            <!--快递单号-->
+            <TextView
+                android:id="@+id/express_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/express_company_tv"
+                android:layout_below="@id/express_company_tv"
+                android:layout_marginTop="10dp"
+                android:textColor="#666666"
+                android:textSize="15sp"
+                android:text="快递单号:885043055685770357" />
+        </RelativeLayout>
+
+        <!--物流追踪的列表-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/traceRv"
+            android:layout_width="match_parent"
+            android:background="#ffffff"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+    
+
